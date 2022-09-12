@@ -1,0 +1,33 @@
+.radioItem {
+  @media (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.radioLabel {
+  position: relative;
+  padding-left: 30px;
+}
+
+.radioInput {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  appearance: none;
+  &:checked + .radio {
+    background-image: url('../../assets/img/radio-checked.svg');
+  }
+}
+
+.radio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-image: url('../../assets/img/radio.svg');
+}

@@ -1,0 +1,20 @@
+.group {
+  &.radio {
+    margin-bottom: 30px;
+    @media (min-width: 768px) {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+
+  &.edit {
+    display: grid;
+    gap: 0 20px;
+    margin-bottom: 20px;
+
+    @media (min-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}

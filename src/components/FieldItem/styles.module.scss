@@ -1,0 +1,26 @@
+.fieldItem {
+}
+
+.fieldName {
+  display: flex;
+  flex-basis: 100%;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background-color: #e9ecef;
+  @media (max-width: 767px) {
+    margin-bottom: 10px;
+  }
+  @media (min-width: 768px) {
+    flex: 0 1 130px;
+    border-right: none;
+  }
+}
+
+.fieldHint {
+  flex: 1 1 100%;
+  color: #868e96;
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 10px;
+}

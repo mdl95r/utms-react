@@ -1,0 +1,17 @@
+.form {
+  input:not(input[type='radio']) {
+    flex: 1 1 auto;
+    height: 38px;
+    color: #495057;
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+
+    &::placeholder {
+      color: rgb(153, 153, 153);
+    }
+    &:focus {
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      transition: 0.1s;
+    }
+  }
+}

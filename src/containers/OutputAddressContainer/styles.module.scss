@@ -1,0 +1,13 @@
+.inputWrap {
+  margin: 0;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+}
+
+.button {
+  @media (max-width: 767px) {
+    margin-bottom: 10px;
+  }
+}

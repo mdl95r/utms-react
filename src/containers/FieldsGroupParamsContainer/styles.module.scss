@@ -1,0 +1,42 @@
+.fieldItem {
+  &:nth-of-type(1) {
+    order: 0;
+  }
+
+  &:nth-of-type(2) {
+    order: 1;
+
+    @media (min-width: 768px) {
+      order: 2;
+    }
+  }
+  &:nth-of-type(3) {
+    order: 2;
+
+    @media (min-width: 768px) {
+      order: 5;
+    }
+  }
+  &:nth-of-type(4) {
+    order: 4;
+
+    @media (min-width: 768px) {
+      order: 1;
+    }
+  }
+  &:nth-of-type(5) {
+    order: 5;
+
+    @media (min-width: 768px) {
+      order: 2;
+    }
+  }
+}
+
+.title {
+  &:nth-child(2) {
+    @media (max-width: 767px) {
+      order: 3;
+    }
+  }
+}

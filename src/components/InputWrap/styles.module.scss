@@ -1,0 +1,10 @@
+.inputWrap {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 38px;
+  margin-bottom: 20px;
+
+  @media (min-width: 576px) {
+    margin-bottom: 40px;
+  }
+}
