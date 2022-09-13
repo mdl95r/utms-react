@@ -26,6 +26,12 @@ export const reducer = (state, action) => {
         disableButton: action.payload,
       };
 
+    case UTMS_ACTIONS.setVisiblePopup:
+      return {
+        ...state,
+        isVisiblePopup: action.payload,
+      };
+
     default: {
       return state;
     }

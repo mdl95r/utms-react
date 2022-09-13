@@ -3,27 +3,29 @@ import styles from './styles.module.scss';
 import cn from 'classnames';
 import { Context } from 'store';
 import { Button, Input, InputWrap } from 'components';
+import { generateUrl } from 'helpers/generateUrl';
+import { UTMS_ACTIONS } from 'store/reducer/constants';
 
 export const OutputAddressContainer = () => {
-  const [state] = React.useContext(Context);
+  const [state, dispatch] = React.useContext(Context);
 
-  const generateResult = () => {
-    let str = Object.entries(state.fields)
-      .map(([key, val]) => {
-        return val ? `${key}=${val}&` : null;
-      })
-      .join('');
-
-    str = str.slice(0, str.length - 1);
-
-    return state.baseURL.address !== ''
-      ? `${Object.values(state.baseURL).join('')}/?${str}`
-      : '';
-  };
+  const generatedResult = generateUrl(state);
 
   const copyResult = (e) => {
     e.preventDefault();
-    navigator.clipboard.writeText(generateResult());
+    navigator.clipboard.writeText(generatedResult);
+
+    dispatch({
+      type: UTMS_ACTIONS.setVisiblePopup,
+      payload: true,
+    });
+
+    setTimeout(() => {
+      dispatch({
+        type: UTMS_ACTIONS.setVisiblePopup,
+        payload: false,
+      });
+    }, 2000);
   };
 
   return (
@@ -40,7 +42,7 @@ export const OutputAddressContainer = () => {
         type="text"
         readOnly
         placeholder="Здесь появится результат ваших действий..."
-        value={generateResult()}
+        value={generatedResult}
       />
     </InputWrap>
   );

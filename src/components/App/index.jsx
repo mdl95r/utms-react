@@ -7,6 +7,7 @@ import {
   InputDropDownContainer,
   OutputAddressContainer,
   RadioGroupSourcesContainer,
+  PopupContainer,
 } from 'containers';
 
 export function App() {
@@ -37,6 +38,7 @@ export function App() {
           <OutputAddressContainer />
         </Form>
       </div>
+      <PopupContainer />
     </Store>
   );
 }

@@ -3,4 +3,5 @@ export const UTMS_ACTIONS = {
   setBaseURL: 'setBaseURL',
   setFields: 'setFields',
   setDisableButton: 'setDisableButton',
+  setVisiblePopup: 'setVisiblePopup',
 };

@@ -7,6 +7,7 @@ const initialState = {
   fields: defaultState,
   baseURL: baseURL,
   disableButton: true,
+  isVisiblePopup: false,
 };
 
 const Store = ({ children }) => {

@@ -9,6 +9,7 @@ import { RadioItems } from './RadioItems';
 import { Title } from './Title';
 import { Hint } from './Hint';
 import { Form } from './Form';
+import { Popup } from './Popup';
 
 export {
   Button,
@@ -22,4 +23,5 @@ export {
   Title,
   Hint,
   Form,
+  Popup,
 };
