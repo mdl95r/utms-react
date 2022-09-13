@@ -33,3 +33,5 @@ Project structure:
 	└── store
 
 ```
+
+### In the future, I plan to rewrite the store on the redux toolkit
