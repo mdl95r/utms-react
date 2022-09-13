@@ -30,6 +30,7 @@ Project structure:
 	├── components
 	├── constants
 	├── containers
+	├── helpers
 	└── store
 
 ```
